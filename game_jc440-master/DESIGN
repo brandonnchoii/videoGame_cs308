@@ -1,0 +1,58 @@
+Brandon Choi
+1/9/2015
+jc440
+CS 308
+
+Genre: Top down scroller shooting
+
+Name: Space Chase: From Durham and Beyond
+
+Back story: You are Marshall Plumlee. Tenting season has just begun and you cannot wait until the 
+upcoming UNC game. However, during an alien invasion yesterday, evil aliens kidnapped Mike Krzyzewski 
+along with the rest of the team. You soon find out that they were working with UNC's team in order to 
+sabotage the game. You cannot let the tenters and the team down. You jump on the spaceship the athletics
+department has so kindly provided and you chase after them. You are Duke's last hope!
+
+Goal: You win the game by getting through both level 1 and level 2. The two levels are described below.
+Dying (losing all 5 lives) before will make you start over from the beginning. In order to rescue 
+Coach K and the team, you must survive 90 intense seconds of space travel and defeat the UFO and 
+aliens.
+
+Basic Mechanics: Arrows will control the spaceship and pressing the space bar will fire your weapon.
+The first level resembles more of an obstacle course (similar to Asteroids) while the second level is
+the boss level against the aliens' UFO. You are given 5 lives and so you cannot be hit more than 5 
+times by any projectile. 
+
+Levels/Modes:
+Level 1: You are dashing through space at warp speed! There are asteroids flying around and debris
+from all the human pollution (trash from the space command center, of course). The goal is to not 
+get hit by anything for 90 seconds in order to catch up to the aliens' UFO. As mentioned before, 
+you have 5 lives and so getting hit more than 5 times will be game over.
+
+Level 2: You caught up with the UFO! This is the boss level. The UFO has 20 "lives" or health points.
+There will also be 3 alien astronauts you must defeat who each have 3 lives. The goal is to destroy
+all of them and rescue the team and Coach K. There is no time limit for this one.
+
+UPDATES after Part 2 Implementation:
+
+I used some abstract classes in order to avoid duplicate code in methods that were shared. Mainly, my design 
+centered on objects which were represented from the Sprite class. Sprite was extended by Spaceship, Projectile,
+Bullet and Alien. The rest of the classes extended one of these four classes and made into specific objects.
+All of these used some kind of image in my image package in order to represent them on the game screen.
+
+SpaceChase, LevelOne, and LevelTwo represent the different game plays available in the game. Level 1 is still 
+a survival game and level two is the boss level. The specific numbers regarding health or whatnot may have changed
+but the overall concepts for the two level remained the same as they were in the initial design document.
+
+Everything in the Screens package represent possible screens that may show up. A lot of these were transitions
+between levels as well as the win and lose screen. I never thought about having to make these specifically but
+once I realized, I feel as though I made them efficiently.
+
+Everything in the Sprites package were all the objects involved in the game. There were a few abstract classes
+in there that were extended by other classes. This was the main chunk of my code and contained the objects'
+functionalities.
+
+GameTimer was just a simple class to make the timer needed in level one. The Main class starts the game.
+
+
+
